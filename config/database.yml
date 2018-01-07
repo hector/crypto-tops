@@ -1,0 +1,16 @@
+default: &default
+  pool: 5
+  timeout: 5000
+  logger: false
+
+development:
+  <<: *default
+  adapter: sqlite3
+  database: db/database.sqlite3
+
+
+production:
+  <<: *default
+  adapter: postgresql
+  database: crypto_index
+  username: hector

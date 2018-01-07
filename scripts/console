@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+# Run a PRY shell session with the app environment loaded
+require 'pry'
+require_relative '../config/environment'
+binding.pry
