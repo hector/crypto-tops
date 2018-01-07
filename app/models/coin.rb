@@ -1,4 +1,6 @@
 class Coin < ActiveRecord::Base
+  has_many :prices, dependent: :destroy
+
   validates :symbol, uniqueness: true
 
   FIAT = {

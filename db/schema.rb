@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 4) do
 
   create_table "coins", force: :cascade do |t|
     t.string "symbol"
+    t.string "url"
     t.index ["symbol"], name: "index_coins_on_symbol", unique: true
   end
 
@@ -21,20 +22,30 @@ ActiveRecord::Schema.define(version: 4) do
     t.string "symbol"
     t.decimal "weight"
     t.integer "index_id"
+    t.integer "coin_id"
+    t.index ["coin_id"], name: "index_index_coins_on_coin_id"
+    t.index ["index_id", "coin_id"], name: "index_index_coins_on_index_id_and_coin_id", unique: true
     t.index ["index_id"], name: "index_index_coins_on_index_id"
   end
 
   create_table "indices", force: :cascade do |t|
     t.string "name"
+    t.string "url"
     t.index ["name"], name: "index_indices_on_name", unique: true
   end
 
   create_table "prices", force: :cascade do |t|
-    t.string "from_sym"
-    t.string "to_sym"
+    t.string "symbol"
     t.date "date"
-    t.decimal "ratio"
-    t.index ["from_sym", "to_sym", "date"], name: "index_prices_on_from_sym_and_to_sym_and_date", unique: true
+    t.decimal "open"
+    t.decimal "high"
+    t.decimal "low"
+    t.decimal "close"
+    t.decimal "volume"
+    t.decimal "market_cap"
+    t.integer "coin_id"
+    t.index ["coin_id", "date"], name: "index_prices_on_coin_id_and_date", unique: true
+    t.index ["coin_id"], name: "index_prices_on_coin_id"
   end
 
 end

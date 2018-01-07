@@ -17,7 +17,6 @@ bundle install
 bundle exec rake db:setup
 
 # Typical steps to generate data
-bundle exec rake db:coin
 bundle exec rake db:index
 bundle exec rake results
 ```
