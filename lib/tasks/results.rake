@@ -10,7 +10,7 @@ end
 
 task results: :environment do
 
-  years = (2014..2017)
+  years = (2014..2018)
   sizes = [10, 25, 50, 75, 100]
 
   years.each do |index_year|

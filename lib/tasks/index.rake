@@ -24,6 +24,7 @@ namespace :db do
   task index: :environment do
 
     years = [
+      { year: 2018, url: 'https://coinmarketcap.com/historical/20180101/' },
       { year: 2017, url: 'https://coinmarketcap.com/historical/20170101/' },
       { year: 2016, url: 'https://coinmarketcap.com/historical/20160103/' },
       { year: 2015, url: 'https://coinmarketcap.com/historical/20150104/' },
