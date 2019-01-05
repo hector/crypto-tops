@@ -4,7 +4,7 @@ This is a weekend project to study the evolution of top cryptocurrency prices.
 
 The study consists on:
 
-* There is source of information that allows us to order cryptocurrencies based on their total market value. This source is coinmarketcap.com
+* There is a source of information that allows us to order cryptocurrencies based on their total market value. This source is coinmarketcap.com from which information in scrapped.
 * By the beginning of the year (1st Janurary), we buy the TOP10, TOP25, TOP50, TOP75 and TOP100 cryptocurrencies, using the same amount of money for each one.
 * Each TOP of a certain year represents an index. For example, the index called TOP10-17 consists of the 10 cryptocurrencies with higher market capitalization by the beginning of 2017.
 * We want to know how much has increased/decreased the value of each index in a certain year thus, a ratio of the value change is calculated.
